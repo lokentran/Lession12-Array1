@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create and manipulate array</title>
+</head>
+<body>
+
+<h1>Same Screen</h1>    
+<input type="text" id="txtValue">
+<button id="btnAdd" onclick="addElementToArray()" >Add</button>
+<button id="btnDisplay" onclick="displayArray()">Display</button>
+<div id="result"></div>
+
+
+<script>
+
+let myArray = [];
+
+let index = 0;
+
+function addElementToArray() {
+ 
+
+    myArray[index] = document.getElementById("txtValue").value;
+    alert("Element: " + myArray[index] + " Added at index " + index);
+    index++;
+
+
+}
+
+function displayArray() {
+    let e = "<hr/>";
+    for (let i = 0; i < myArray.length; i++) {
+        e += "Element " + i + " = " + myArray[i] + "<br/>";
+    }
+    document.getElementById("result").innerHTML = e;
+}
+
+
+</script>
+
+</body>
+</html>
