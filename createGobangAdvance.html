@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Gobang Advance </title>
+
+    <style>
+        table, tr, td {
+            border-collapse: collapse;
+            border: 1px solid black;
+        }
+
+        td {
+            width: 50px;
+            height: 50px;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+<h1>Gobang</h1>
+
+<div id="gobang" ></div>
+
+<script>
+
+let data = "<table>";
+
+for (let i = 0; i < 10; i++) {
+    data += "<tr>"
+    for (let j = 0; j < 10; j++) {
+        data += "<td onclick='fillSign()' >" + "&nbsp;" + "</td>";
+        
+    }
+    data +="</tr>";
+}
+
+document.getElementById('gobang').innerHTML = data;
+
+// let n = 2;
+
+// function fillSign() {
+//     if(n % 2 == 0) {
+//         this.innerHTML = 'x';
+//     } else {
+//         this.innerHTML = 'o';
+//     }
+// }
+
+
+</script>
+
+
+</body>
+</html>

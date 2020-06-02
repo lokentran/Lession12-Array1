@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gobang game</title>
+</head>
+<body>
+    <h1>Gobang game</h1>
+    <div id = "gobang" ></div>
+    <button onclick="changeValue()" >Change value</button>
+
+    <script>
+        let board = [];
+        data = '';
+        for (let i = 0; i < 5; i++) {
+            board[i] = [0,0,0,0,0];
+        }
+
+        for (let i = 0; i < 5; i++) {
+            data += "<br>";
+            for (let j = 0; j < 5; j++) {
+                data += board[i][j] + "&nbsp;&nbsp;&nbsp;";             
+            }
+        }
+
+        document.getElementById('gobang').innerHTML = data;
+
+        function changeValue() {
+            let positionX = +prompt("X:");
+            let positionY = +prompt("Y:");
+            board[positionX][positionY] = "x";
+            let newData = "";
+
+            for (let i = 0; i < 5; i++) {
+                newData += "<br>";
+                for (let j = 0; j < 5; j++) {
+                    newData += board[i][j] + "&nbsp;&nbsp;&nbsp;";
+                }
+                
+            }
+            document.getElementById('gobang').innerHTML = newData;
+        }
+
+    </script>
+
+</body>
+</html>
